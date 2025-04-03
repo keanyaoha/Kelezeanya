@@ -7,7 +7,11 @@ print("Libraries Loaded Successfully")
 def load_emission_factors():
     csv_url = "https://raw.githubusercontent.com/keanyaoha/Final_Project_WBS/main/emission_factor_formated.csv"
     return pd.read_csv(csv_url)
-
+    
+#def per_capita_data():
+ #   csv_url_1 = "https://raw.githubusercontent.com/keanyaoha/Final_Project_WBS/main/per_capita_filtered.csv"
+  #  return pd.read_csv(csv_url_1
+                      
 def load_per_capita_data():
     return pd.read_csv("per_capita_filtered.csv")
 
@@ -24,7 +28,7 @@ common_countries = set(emission_countries).intersection(set(per_capita_countries
 
 # Streamlit UI
 st.title("Carbon Footprint Per Capita")
-st.image('carbon_image.jpg')
+#st.image('carbon_image.jpg')
 
 # Collect identity and mood
 identity = st.text_input("Type your Champ:")
